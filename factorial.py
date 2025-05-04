@@ -1,14 +1,11 @@
-# factorial.py
-def factorial(n):
-# Calculating the factorial of a non-negative interger.
-    if n==0:
-        return 1  
-    else:
-        return n * factorial(n-1)
-        
-num = int(input("Enter a non-negative integer: "))
-result = factorial(num)
 
-print(f" The factorial of {num} is {result}")
- 
-   
+def fact(n):
+    result = 1
+    while n >= 1:
+        result *= n
+        n -= 1
+    return result
+
+number = int(input("Enter the number: "))
+factorial = fact(number)
+print("factorial of " , number, "is" , factorial)
